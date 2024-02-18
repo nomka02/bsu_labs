@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title>Подсчёт суммы двух чисел</title>
+	<meta charset="utf-8">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+</head>
+<body>
+
+    <h1>Подсчёт суммы двух чисел</h1>
+    <hr>
+
+    <form onsubmit="return false">
+        <input type="text" id="num-a" value="5">
+        <input type="text" id="num-b" value="4">
+        <button type="submit" onclick="getSum()">Посчитать сумму</button>
+    </form>
+
+    <hr>
+
+    <h1 id="result">0</h1>
+	
+<script>
+function ge(id) {
+  return document.getElementById(id);
+}
+
+function getSum() {
+    const inputA = ge('num-a');
+    const inputB = ge('num-b');
+
+    let a = +inputA.value;
+    let b = +inputB.value;
+
+    let sum = a + b;
+
+    // alert(sum);
+
+    ge('result').innerHTML = sum;
+}
+
+var x = 10;
+// Here x is 10
+{
+const x = 2;
+// Here x is 2
+}
+// Here x is 10
+
+</script>
+
+<script>
+console.log("x: ", window.x);
+</script>
+
+
+</body>
+</html>
